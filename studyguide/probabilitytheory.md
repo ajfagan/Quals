@@ -42,7 +42,7 @@ $$
 
 $$
 f_Y(y) = \begin{cases} 
-\sum_{i=1}^k f_X(g_i^{-1}(x))\left|\frac{d}{dy}g_i^{-1}(y)\right|,& y\in\mathcal{Y}\\ 
+{\sum}_{i=1}^k f_X(g_i^{-1}(x))\left|\frac{d}{dy}g_i^{-1}(y)\right|,& y\in\mathcal{Y}\\ 
 0, &otherwise.
 \end{cases}
 $$
