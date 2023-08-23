@@ -124,6 +124,45 @@ $$
 
 Let $f(x|\theta)$ be the pdf of a sample $X$. Suppose there exists a function $T(X)$ such that, for every two sample points $x$ and $y$, the ratio $f(x|\theta) / f(x|\theta)$ is a constant as a function of $\theta$ iff $T(x) = T(y)$. Then $T(X)$ is a minimal sufficient statistic. 
 
+**Minimal Sufficiency in exponential families**
+
+$T(X)$ is a minimal sufficient statistic for $\eta(\theta)$ iff for all $\eta_1, \eta_2$ in the natural parameter space and $x_1,x_2$ in the support of $X$, $(\eta_1 - \eta_2)(T(x_1) - T(x_2)) = 0 \implies \eta_1 = \eta_2$ or $x_1 = x_2.$
+
 **Completeness (6.2.21)**
 
 Let $f(t|\theta)$ be a family of pdfs for a statistic $T(X)$. The family of probability distributions is called _complete_ if $\mathbb E_\theta g(T) = 0$ implies that $P_\theta(g(T) = 0) = 1$ for all $\theta$. Equivalently, $T(X)$ is called a _complete statistic_.
+
+**Completeness in Exponential families**
+
+If the natural parameter space $\eta(\theta)$ has nonempty interior, then the statistic $T(X)$ is a complete statistic.
+
+**Cramer-Rao Inequality (iid case) (7.3.10)**
+
+Let $X_1,\ldots, X_n$ be an iid sample with pdf $f(x|\theta)$, and let $W(X) = W(X_1, \ldots X_n)$ be any estimator satisfying
+
+$$
+\frac{d}{d\theta}\mathbb E_\theta W(X) = \int_\mathcal{X}\frac{\partial}{\partial\theta}[W(x)f(x|\theta)]dx
+$$
+
+and
+
+$$
+\mathbb V_\theta W(X) < \infty.
+$$
+
+Then
+
+$$
+\begin{aligned}
+\mathbb V_\theta W(X) \geq& \frac{\left(\frac{d}{d\theta}\mathbb E_\theta W(X)\right)^2}{n\mathbb E_\theta \left(\left(\frac{\partial}{\partial\theta}\log f(X|\theta)\right)^2\right)}\\
+=& \frac{\left(\frac{d}{d\theta}\mathbb E_\theta W(X)\right)^2}{nI(\theta)}
+\end{aligned}
+$$
+
+**Information for an exponential family (7.3.11)**
+
+If $f(x|\theta)$ satisfies regularity conditions, which are always satisfied in an exponential family:
+
+$$
+I(\theta) = \mathbb E_\theta \left(\left(\frac{\partial}{\partial\theta}\log f(X|\theta)\right)^2\right) = -\mathbb E_\theta \left(\frac{\partial^2}{\partial\theta^2}\log f(X|\theta)\right)
+$$
