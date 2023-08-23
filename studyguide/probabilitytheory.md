@@ -21,9 +21,7 @@ Important Results:
 
 - Theorem 2.15 (Change of Variables): 
     - Let $X$ have pdf $f_X(x)$ and let $Y = g(X)$, where $g$ is <i>monotone</i>. Let $\mathcal{X}$ and $\mathcal{Y}$ be defined by
-    $$
-    \mathcal{X} = \{x:f_X(x) > 0\}
-    $$
+    $$\mathcal{X} = \{x:f_X(x) > 0\}$$
 
     $$
     \mathcal{Y} = \{y : \exists x\in\mathcal{X}, y = g(x)\}.
