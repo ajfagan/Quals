@@ -78,7 +78,7 @@ Important Results:
 - Binomial: The sum of $n$ iid Bernoulli processes with mean $p$
     - parameters: $n,p$
     - Mass functions
-        - pmf: $f_X(x) = \begin{pmatrix}n \\ x\end{pmatrix} p^x(1-p)^{n-x}, x = 0, \ldots, n$
+        - pmf: $`f_X(x) = \begin{pmatrix}n \\ x\end{pmatrix} p^x(1-p)^{n-x}, x = 0, \ldots, n`$
         - cmf: $
         F_X(x) = \begin{cases}
             \sum_{i=0}^{\lfloor{x}\rfloor}f_X(i),& 0\leq x < n\\
