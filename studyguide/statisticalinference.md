@@ -96,12 +96,12 @@ The _Mean squared error_ (MSE) of an estimator $W$ of a parameter $\theta$ is th
 
 **Bias (7.3.2)**
 
-The _bias_ of a point estimater $W$ of a parameter $\theta$ is ${\rm Bias}_\theta W = \mathbb E_\theta - \theta$. An estimator with bias 0 for all values of $\theta$ is called _unbiased_. 
+The _bias_ of a point estimater $W$ of a parameter $\theta$ is $`\text{Bias}_\theta W = \mathbb E_\theta - \theta`$. An estimator with bias 0 for all values of $\theta$ is called _unbiased_. 
 
 **MSE-Bias relationship**
 
 $$
-\mathrm{MSE}_\theta(W) = \mathbb V\theta + (\mathrm{Bias}_\theta(W))^2
+\text{MSE}_\theta(W) = \mathbb V\theta + (\text{Bias}_\theta(W))^2
 $$
 
 ## Weighted Least Squares
