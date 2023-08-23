@@ -167,3 +167,51 @@ $$
 I(\theta) = \mathbb E_\theta \left(\left(\frac{\partial}{\partial\theta}\log f(X|\theta)\right)^2\right) = -\mathbb E_\theta \left(\frac{\partial^2}{\partial\theta^2}\log f(X|\theta)\right)
 $$
 
+
+**Neyman-Pearson Lemma (8.3.12)**
+
+Consider testing $H_0:\theta = \theta_0$ vs. $H_1:\theta = \theta|1$, where the pdf corresponding to $\theta_i$ is $f(x|\theta_i)$, using a test with rejection region $R$ that satisfies
+
+$$
+x\in R \hspace{1em} {\rm if} \hspace{1em} f(x|\theta_1) > kf(x|\theta_0)
+$$
+
+and
+
+$$
+x\in R^c \hspace{1em} {\rm if} \hspace{1em} f(x|\theta_1) < kf(x|\theta_0),
+$$
+
+for some $k\geq0$ and
+
+$$
+\alpha = P_{\theta_0}(X\in R).
+$$
+
+Then 
+1. (Sufficiency) Any test that satisfies the above is a UMP level $\alpha$ test. 
+2. (Necessity) If there exists such a test with $k>0$, then every UMP level $\alpha$ test is a size $\alpha$ test and every UMP level $\alpha$ test satisfies the first condition except, perhaps, on a null set, $A$, under both $\theta_i$, i.e.
+
+$$
+P_{\theta_0}(X\in A) = P_{\theta_1}(X\in A) = 0.
+$$
+
+**Corollary for sufficient statistics**
+
+Consider the hypothesis in Neyman-Pearos. Suppose $T(X)$ is a sufficient statistic for $\theta$ and $g(t|\theta_i)$ is the pdf of $T$ corresponding to $\theta_i$. Then any test based on $T$ with reject region $S$ is a UMP level $\alpha$ test if it satisfies
+
+$$
+t\in S \hspace{1em} {\rm if} \hspace{1em} g(t|\theta_1) > kg(t|\theta_0)
+$$
+
+and
+
+$$
+t\in S^c \hspace{1em} {\rm if} \hspace{1em} g(t|\theta_1) < kg(t|\theta_0),
+$$
+
+for some $k\geq0$, where
+
+$$
+\alpha = P_{\theta_0}(X\in S).
+$$

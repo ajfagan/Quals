@@ -6,6 +6,7 @@ TODO
 - [ ] Estimation Equation
 - [ ] Weighted Least Squares
 - [ ] Bayes Estimators
+- [ ] Likelihood ratio tests
 
 ## Sample
 
@@ -165,14 +166,72 @@ If $T$ is a complete, sufficient statistic for a parameter $\theta$, then $\phi(
 
 ## Likelihood ratio tests (8.2.1)
 
-## Evaluation of tests and Neyman-Pearson Lemma (8.3)
+## Evaluation of tests and Neyman-Pearson Lemma, UMP tests, unbiased tests (8.3)
 
-**Power function**
+**Power function (8.3.1)**
 
 The power function of a hypothesis test with rejection region $R$ is the function of $\theta$ defined by $\beta(\theta) = P_\theta (X\in R)$.
 
-**Size and level**
+**Size and level (8.3.5-8.3.6)**
 
 For $0\leq\alpha\leq 1$, a test with power function $\beta(\theta)$ is a _size_ $\alpha$ test if $\sup_{\theta\in\Theta_0}\beta(\theta) = \alpha$.
 
 For $0\leq\alpha\leq 1$, a test with power function $\beta(\theta)$ is a _level_ $\alpha$ test if $\sup_{\theta\in\Theta_0}\beta(\theta) \leq \alpha$.
+
+**Unbiased tests (8.3.9)**
+
+A test with power function $beta(\theta)$ is unbiased if $\beta(\theta') \geq \beta(\theta'')$ for every $\theta'\in\Theta_0^c$ and $\theta''\in\Theta_0.$
+
+**UMP tests (8.3.11)**
+
+Let $\mathcal{C}$ be a class of tests for testing $H_0:\theta\in\Theta_0$ versus $H_1:\theta\in\Theta_0^c$. A test in class $\mathcal{C}$ with power function $\beta(\theta)$, is a _uniformly most powerful_ (UMP) class $\mathcal{C}$ test if $\beta(\theta) \geq \beta'(\theta)$ for every $\theta\in\Theta_0^c$ and $\beta'(\theta)$ that is a power function of a test in class $\mathcal{C}$.
+
+**Neyman-Pearson Lemma (8.3.12)**
+
+Consider testing $H_0:\theta = \theta_0$ vs. $H_1:\theta = \theta|1$, where the pdf corresponding to $\theta_i$ is $f(x|\theta_i)$, using a test with rejection region $R$ that satisfies
+
+$$
+x\in R \hspace{1em} {\rm if} \hspace{1em} f(x|\theta_1) > kf(x|\theta_0)
+$$
+
+and
+
+$$
+x\in R^c \hspace{1em} {\rm if} \hspace{1em} f(x|\theta_1) < kf(x|\theta_0),
+$$
+
+for some $k\geq0$ and
+
+$$
+\alpha = P_{\theta_0}(X\in R).
+$$
+
+Then 
+1. (Sufficiency) Any test that satisfies the above is a UMP level $\alpha$ test. 
+2. (Necessity) If there exists such a test with $k>0$, then every UMP level $\alpha$ test is a size $\alpha$ test and every UMP level $\alpha$ test satisfies the first condition except, perhaps, on a null set, $A$, under both $\theta_i$, i.e.
+
+$$
+P_{\theta_0}(X\in A) = P_{\theta_1}(X\in A) = 0.
+$$
+
+**Corollary for sufficient statistics**
+
+Consider the hypothesis in Neyman-Pearos. Suppose $T(X)$ is a sufficient statistic for $\theta$ and $g(t|\theta_i)$ is the pdf of $T$ corresponding to $\theta_i$. Then any test based on $T$ with reject region $S$ is a UMP level $\alpha$ test if it satisfies
+
+$$
+t\in S \hspace{1em} {\rm if} \hspace{1em} g(t|\theta_1) > kg(t|\theta_0)
+$$
+
+and
+
+$$
+t\in S^c \hspace{1em} {\rm if} \hspace{1em} g(t|\theta_1) < kg(t|\theta_0),
+$$
+
+for some $k\geq0$, where
+
+$$
+\alpha = P_{\theta_0}(X\in S).
+$$
+
+**Monotone Likelihood Ratio**
