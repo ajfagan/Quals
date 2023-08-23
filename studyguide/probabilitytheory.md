@@ -21,19 +21,24 @@ Important Results:
 
 - Theorem 2.15 (Change of Variables): 
     - Let $X$ have pdf $f_X(x)$ and let $Y = g(X)$, where $g$ is <i>monotone</i>. Let $\mathcal{X}$ and $\mathcal{Y}$ be defined by
+    
     $$
     \mathcal{X} = \{x:f_X(x) > 0\}
     $$
+
     $$
     \mathcal{Y} = \{y : \exists x\in\mathcal{X}, y = g(x)\}.
     $$
+
     Suppose that $f_X(x)$ is continuous on $\mathcal{X}$ and that $g^{-1}(y)$ has a continuous derivative on $\mathcal{Y}$. Then the pdf of $Y$ is
+    
     $$
     f_Y(y) = \begin{cases}
     f_X(g^{-1}(y))\left|\frac{d}{dy}g^{-1}(y)\right|, &y\in\mathcal{Y}\\
     0, &otherwise.
     \end{cases}
     $$
+
 - Theorem 2.18 (Generalized Change of Variables)
     - Let $X$ have pdf $f_X(x)$ and let $Y = g(X)$. Define the sample space $\mathcal{X}$ as in Theorem 2.15. Suppose $\exists A_0,\ldots, A_k$ a partition of $\mathcal{X}$ such that $P(x\in A_0) = 0$ and $f_X(x)$ is continuous on each $A_i$. Further, suppose $\exists g_1(x), \ldots,g_k(x)$ , defined on $A_1, \ldots, A_k$ respectively, satisfying 
         1. $g(x) = g_i(x), \forall x\in A_i$
@@ -41,6 +46,7 @@ Important Results:
         3. The set $\mathcal{Y} = \{y: \exists x\in A_i, g_i(x) = y\}$ is the same for each $i$ in $1,\ldots,k$.
         4. $g_i^{-1}(y)$ has a continuous derivative on $\mathcal{Y}$ for each $i$ in $1,\ldots,k$
     - Then
+
     $$
     f_Y(y) = \begin{cases}
         \sum_{i=1}^kf_X(g_i^{-1}(x))\left|\frac{d}{dy}g_i^{-1}(y)\right|,& y\in\mathcal{Y}\\
@@ -92,9 +98,11 @@ Important Results:
     - parameters: $k, n, N, K$
     - Mass functions
         - pmf: 
+
         $$
         \frac{\begin{pmatrix}K\\k\end{pmatrix}\begin{pmatrix}N-n \\ n-k\end{pmatrix}}{\begin{pmatrix}N\\ n\end{pmatrix}}
         $$
+
     - Moments:
         - Mean = $n\frac{K}{N}$
         - Variance = $n\frac{K}{N}\frac{N-K}{N}\frac{N-n}{N-1}$
@@ -114,20 +122,26 @@ Important Results:
 
 Important Definitions:
 - A family of pdfs or pmfs is called an exponential family if it can be expressed as
+
 $$
 f(x|\theta) = h(x)c(\theta)\exp\left(\eta(\theta)'T(x)\right)
 $$
+
 or, equivalently
+
 $$
 \log f(x|\theta) = \log h(x) - \log c(\theta) + \eta(\theta)'T(x)
 $$
+
 - A curved exponential family is one whose dimension $d$ is smaller than the number of parameters $k$. If $d=k$, then the family is a full exponential family. 
 
 Important Results:
 - If $X$ is a random variable with pdf in an exponential family, then 
+
 $$
 \mathbb E\frac{\partial}{\partial \theta}\eta(\theta)'T(x) = - \frac{\partial}{\partial \theta}\log c(\theta)
 $$
+
 $$
 \mathbb V\frac{\partial}{\partial \theta}\eta(\theta)'T(x) = - \frac{\partial^2}{\partial \theta^2}\log c(\theta) - \mathbb{E}\left(\frac{\partial^2}{\partial\theta^2}\eta(\theta)\right)'T(x)
 $$
@@ -140,18 +154,21 @@ $$
 
 Convergence in probability:  (5.5.1)
 - A sequence of random variables $X_1, X_2, \ldots$ converges in probability to a random variable $X$, denoted $X_n \rightarrow_p X$, if, for every $\varepsilon >0$, 
+
 $$
 \lim_{n\rightarrow\infty}P(|X_n - X| < \varepsilon) = 1
 $$
 
 Convergence almost surely: (5.5.5)
 - A sequence of random variable $X_1, X_2,\ldots$ converges almost surely to $X$, denoted $X_n \rightarrow_{a.s.} X$, if for every $\varepsilon > 0$,
+
 $$
 P\left(\lim_{n\rightarrow\infty}|X_n - X| < \varepsilon\right) = 1.
 $$
 
 Convergence in distribution: (5.5.10)
 - A sequence of random variables $X_1,X_2,\ldots$ converges in distribution to $X$, denoted $X_n \rightarrow_d X$, if, for all continuity points of $F_X(x)$,
+
 $$
 \lim_{n\rightarrow\infty}F_{X_n}(x) = F_X(x)
 $$
@@ -186,16 +203,21 @@ Slutsky Theorem (5.5.17)
 ## Delta's Method (5.5)
 Delta's Method (5.5.24)
 - Let $Y_n$ such that $\sqrt{n}(Y_n - \theta) \rightarrow_d N(0, \sigma^2)$. Then for a function $g$ and a value $\theta$, suppose that $g'(\theta)$ exists and is not 0. Then
+
 $$
 \sqrt{n}[g(Y_n) - g(\theta)] \rightarrow_d N(0, \sigma^2[g'(\theta)]^2)
 $$
+
 Second-order Delta's Method (5.5.26)
 - Let $Y_n$ such that $\sqrt{n}(Y_n - \theta) \rightarrow_d N(0, \sigma^2)$. Then for a function $g$ and a value $\theta$, suppose that $g'(\theta) = 0$ and $g''(\theta)$ exists and is not 0. Then
+
 $$
 n[g(Y_n) - g(\theta)] \rightarrow_d \sigma^2\frac{g''(\theta)}{2}\chi_1^2
 $$
+
 Multivariate Delta's Method (5.5.28)
 - Let $X_1, \ldots, X_n$ be a random sample with $\mathbb E X_{ij} = \mu_i$ and ${\rm Cov}(X_{ik}, X_{jk}) = \sigma_{ij}$. For a given function $g$ with continuous first partial dervatives and a specific $\mu = (\mu_1, \ldots, \mu_p)$ for which $\tau^2 = \sum\sum\sigma_{ij}\frac{\partial g(\mu)}{\partial \mu_i}\frac{\partial g(\mu)}{\partial \mu_j} > 0$,
+
 $$
 \sqrt{n}[g(\bar X_1, \ldots \bar X_s) - g(\mu_1, \ldots, \mu_p)] \rightarrow_d N(0, \tau^2).
 $$
