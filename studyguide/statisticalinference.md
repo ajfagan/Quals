@@ -34,6 +34,7 @@ If $p(x|\theta)$ is the joint pdf of $X$ and $q(t|\theta)$ is the pdf of $T(X)$,
 **Factorization Theorem (6.2.6)**
 
 Let $f(x|\theta)$ denote the joint pdf of a sample $X$. A statistic $T(X)$ is a sufficient statistic for $\theta$ iff there exists functions $g(t|\theta)$ and $h(x)$ such that, for all sample points $x$ and all parameters $\theta$,
+
 $$
 f(x|\theta) = g(T(x)|\theta)h(x).
 $$
@@ -78,9 +79,11 @@ If $\hat\theta$ is the MLE of $\theta$, then for any function $\tau(\theta)$, th
 
 **Method of Moments**
 Let $X_1, \ldots, X_n$ be a sample from a population with pdf $f(x| \theta_1,\ldots, \theta_k)$. The method of moments estimator of $\tilde\theta$ is the solution to the system of equations
+
 $$
 \frac{1}{n}{\sum}_{i=1}^nX_i^t = \mu_t'(\tilde\theta)
 $$
+
 for $t = 1,\ldots,k$ and $\mu_t'(\theta) = \mathbb EX^t$.
 
 ## Estimation equation
@@ -96,8 +99,9 @@ The _Mean squared error_ (MSE) of an estimator $W$ of a parameter $\theta$ is th
 The _bias_ of a point estimater $W$ of a parameter $\theta$ is ${\rm Bias}_\theta W = \mathbb E_\theta - \theta$. An estimator with bias 0 for all values of $\theta$ is called _unbiased_. 
 
 **MSE-Bias relationship**
+
 $$
-{\rm MSE}_\theta(W) = \mathbb V\theta + ({\rm Bias}_\theta(W))^2
+\mathrm{MSE}_\theta(W) = \mathbb V\theta + (\mathrm{Bias}_\theta(W))^2
 $$
 
 ## Weighted Least Squares
