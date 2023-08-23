@@ -92,10 +92,7 @@ Important Results:
 - Hypergeometric distribution: Probability of $k$ successes in $n$ draws from a population of size $N$ containing $K$ successes
     - parameters: $k, n, N, K$
     - Mass functions
-        - pmf: 
-    $$
-    \frac{\begin{pmatrix}K-k\end{pmatrix}\begin{pmatrix}N-n \\ n-k\end{pmatrix}}{\begin{pmatrix}N\\ n\end{pmatrix}}
-    $$
+        - pmf: $`\frac{\begin{pmatrix}K-k\end{pmatrix}\begin{pmatrix}N-n \\ n-k\end{pmatrix}}{\begin{pmatrix}N\\ n\end{pmatrix}}`$
     - Moments:
         - Mean = $n\frac{K}{N}$
         - Variance = $n\frac{K}{N}\frac{N-K}{N}\frac{N-n}{N-1}$
