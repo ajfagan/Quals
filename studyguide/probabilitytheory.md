@@ -33,7 +33,7 @@ Important Results:
     $$
 
     ```math
-    a + b
+    a + b^2
     ```
 
 - Theorem 2.18 (Generalized Change of Variables)
