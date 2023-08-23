@@ -28,10 +28,7 @@ Theorem (6.2.2)
 
 Factorization Theorem (6.2.6)
 - Let $f(x|\theta)$ denote the joint pdf of a sample $X$. A statistic $T(X)$ is a sufficient statistic for $\theta$ iff there exists functions $g(t|\theta)$ and $h(x)$ such that, for all sample points $x$ and all parameters $\theta$,
-
-$$
-f(x|\theta) = g(T(x)|\theta)h(x).
-$$
+$$f(x|\theta) = g(T(x)|\theta)h(x).$$
 
 ## Minimial Sufficiency (6.2.2)
 
