@@ -7,6 +7,7 @@ TODO
 - [ ] Weighted Least Squares
 - [ ] Bayes Estimators
 - [ ] Likelihood ratio tests
+- [ ] Robustness
 
 ## Sample
 
@@ -415,3 +416,41 @@ then the _asymptotic relative efficiency_ (ARE) of $V_n$ wrt $W_n$ is
 $$
 {\rm ARE}(V_n, W_n) = \frac{\sigma_W^2}{\sigma_V^2}.
 $$
+
+## Robustness (10.2)
+
+## Asymptotic tests based on likelihoods and $\chi^2$-tests (10.3)
+
+**Asymptotic distribution of the LRT (10.3.3)**
+
+Let $X_1, \ldots, X_n$ be a random sample from a pdf $f(x|\theta)$. Under regularity conditions, if $\theta\in\Theta_0$, then the distribution of the statistic 
+
+$$
+-2\log\lambda(X) = -2\left[\sup_{\theta\in\Theta_0}\log f(x|\theta) - \sup_{\theta\in\Theta}\log f(X|\theta)\right]
+$$
+
+converges to a $\chi_d^2$ where $d$ is the difference between the number of free parameters specified by $\theta\in\Theta_0$ and the number of free parameters specified by $\theta\in\Theta$. 
+
+**Wald Test (10.3.2)**
+
+A _Wald test_ is a test based on a statistic of the form
+
+$$
+Z_n = \frac{W_n - \theta_0}{S_n}
+$$
+where $\theta_0$ is the hypothesized null, $W_n$ is an estimator of $\theta$, and $S_n$ is a standard error for $W_n$. If $W_n$ is the MLE of $\theta$, then $S_n = 1 / \sqrt{I_v(W_n)}$ is a reasonable error. 
+
+**Score Test (10.3.2)**
+
+Define 
+
+$$
+Z_S = s(\theta_0)/\sqrt{I_n(\theta_0)}
+$$
+
+where $s(\theta) = \frac{\partial}{\partial\theta}\log f(X|\theta)$ is the score statistic. 
+
+It can be shown that $\mathbb E_\theta s(\theta) = 0$ and $\mathbb V_\theta s(\theta) = I_n(\theta)$,
+
+so $Z_s$ has mean 0 and variance 1, and, hence, converges to $N(0,1)$. 
+

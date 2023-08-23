@@ -223,3 +223,26 @@ A family of pdf's $\{g(t|\theta): \theta\in\Theta\}$ for a univariate random var
 **Karlin-Rubin (8.3.17)**
 
 Consider testing $H_0: \theta\leq\theta_0$ versus $H_1: \theta > \theta_0$. Suppose that $T$ is a sufficient statistic for $\theta$ and the family of pdfs $\{g(t|\theta) | \theta\in\Theta\}$ of $T$ has an MLR. Then for any $t_0$, the test that rejects $H_0$ iff $T>t_0$ is a UMP level $\alpha$ test, where $\alpha = P_{\theta_0}(T > t_0)$.
+
+**Wald Test (10.3.2)**
+
+A _Wald test_ is a test based on a statistic of the form
+
+$$
+Z_n = \frac{W_n - \theta_0}{S_n}
+$$
+where $\theta_0$ is the hypothesized null, $W_n$ is an estimator of $\theta$, and $S_n$ is a standard error for $W_n$. If $W_n$ is the MLE of $\theta$, then $S_n = 1 / \sqrt{I_v(W_n)}$ is a reasonable error. 
+
+**Score Test (10.3.2)**
+
+Define 
+
+$$
+Z_S = s(\theta_0)/\sqrt{I_n(\theta_0)}
+$$
+
+where $s(\theta) = \frac{\partial}{\partial\theta}\log f(X|\theta)$ is the score statistic. 
+
+It can be shown that $\mathbb E_\theta s(\theta) = 0$ and $\mathbb V_\theta s(\theta) = I_n(\theta)$,
+
+so $Z_s$ has mean 0 and variance 1, and, hence, converges to $N(0,1)$. 
