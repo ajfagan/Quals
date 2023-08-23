@@ -96,7 +96,6 @@ The _Mean squared error_ (MSE) of an estimator $W$ of a parameter $\theta$ is th
 The _bias_ of a point estimater $W$ of a parameter $\theta$ is ${\rm Bias}_\theta W = \mathbb E_\theta - \theta$. An estimator with bias 0 for all values of $\theta$ is called _unbiased_. 
 
 **MSE-Bias relationship**
-
 $$
 {\rm MSE}_\theta(W) = \mathbb V\theta + ({\rm Bias}_\theta(W))^2
 $$
@@ -109,6 +108,6 @@ $$
 
 **UMVUE (7.3.7)**
 
-An estimator $W^*$ is a uniformly minimum variance unbiased estimator (UMVUE) of $\tau(\theta)$ if it satisfies $\mathbb EW^* = \tau(\theta)$ for all $\theta$ (it's unbiased) and, for any other estimator $W$ with $\mathbb E_\theta W = \tau(\theta)$, we have $\mathbb V_\theta W^*\leq\mathbb V_\theta W$ for all $\theta$. 
+An estimator $`W^*`$ is a uniformly minimum variance unbiased estimator (UMVUE) of $\tau(\theta)$ if it satisfies $`\mathbb EW^* = \tau(\theta)`$ for all $\theta$ (it's unbiased) and, for any other estimator $W$ with $\mathbb E_\theta W = \tau(\theta)$, we have $`\mathbb V_\theta W^*\leq\mathbb V_\theta W`$ for all $\theta$. 
 
 ## Information inequality (7.3.2)
