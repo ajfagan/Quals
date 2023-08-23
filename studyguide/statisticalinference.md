@@ -101,7 +101,7 @@ The _bias_ of a point estimater $W$ of a parameter $\theta$ is $`\text{Bias}_\th
 **MSE-Bias relationship**
 
 $$
-\text{MSE}_\theta(W) = \mathbb V\theta + (\text{Bias}_\theta(W))^2
+{MSE}_\theta(W) = \mathbb V\theta + ({Bias}_\theta(W))^2
 $$
 
 ## Weighted Least Squares
