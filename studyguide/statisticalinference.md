@@ -46,5 +46,5 @@ Completeness (6.2.21)
 - Let 
 
 ```{theorem, 6.2.21, name = "Completeness"}
-Let $`f(t|\theta)`$ be a family of pdfs for a statistic
+Let \(f(t|\theta)\) be a family of pdfs for a statistic
 ```
