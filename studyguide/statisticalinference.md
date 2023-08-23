@@ -235,3 +235,29 @@ $$
 $$
 
 **Monotone Likelihood Ratio**
+
+A family of pdf's $\{g(t|\theta): \theta\in\Theta\}$ for a univariate random variable $T$ with real-valued parameter $\theta$ has a _monotone likelihood ratio_ (MLR) if for every $\theta_2 > \theta_1, g(t, \theta_2) / g(t, \theta_1) is a monotone function of $t$ on the support $\{t : g(t|\theta_1) > 0 \hspace{1em} {\rm or} \hspace{1em} g(t|\theta_2) > 0\}$, where $c/0$ is defined as $\infty$ if $0< c$.
+
+**Karlin-Rubin (8.3.17)**
+
+Consider testing $H_0: \theta\leq\theta_0$ versus $H_1: \theta > \theta_0$. Suppose that $T$ is a sufficient statistic for $\theta$ and the family of pdfs $\{g(t|\theta) | \theta\in\Theta\}$ of $T$ has an MLR. Then for any $t_0$, the test that rejects $H_0$ iff $T>t_0$ is a UMP level $\alpha$ test, where $\alpha = P_{\theta_0}(T > t_0)$.
+
+**p-values (8.3.26)**
+
+A _p-value_ $p(X)$ is a test statistic satisfying $0\leq p(x) \leq 1$ for every sample point $x$. Small values of $p(X)$ give evidence that $H_1$ is true. A $p$-value is _valid_ if, for every $\theta\in\Theta_0$ and every $0\leq\alpha\leq1$,
+
+$$
+P_\theta(p(X) \leq \alpha) \leq \alpha.
+$$
+
+**Calculating $p$-values from statistics**
+
+Let $W(X)$ be a test statistic such that large values of $W$ give evidence that $H_1$ is true. for each sample point $x$, define 
+
+$$
+p(x) = \sup_{\theta\in\Theta_0}P_\theta(W(X) \geq W(x)).
+$$
+
+Then $p(X)$ is a valid $p$-value.
+
+## Duality between tests and confidence sets (9.1)

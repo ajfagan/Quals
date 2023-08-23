@@ -215,3 +215,11 @@ for some $k\geq0$, where
 $$
 \alpha = P_{\theta_0}(X\in S).
 $$
+
+**Monotone Likelihood Ratio**
+
+A family of pdf's $\{g(t|\theta): \theta\in\Theta\}$ for a univariate random variable $T$ with real-valued parameter $\theta$ has a _monotone likelihood ratio_ (MLR) if for every $\theta_2 > \theta_1, g(t, \theta_2) / g(t, \theta_1) is a monotone function of $t$ on the support $\{t : g(t|\theta_1) > 0 \hspace{1em} {\rm or} \hspace{1em} g(t|\theta_2) > 0\}$, where $c/0$ is defined as $\infty$ if $0< c$.
+
+**Karlin-Rubin (8.3.17)**
+
+Consider testing $H_0: \theta\leq\theta_0$ versus $H_1: \theta > \theta_0$. Suppose that $T$ is a sufficient statistic for $\theta$ and the family of pdfs $\{g(t|\theta) | \theta\in\Theta\}$ of $T$ has an MLR. Then for any $t_0$, the test that rejects $H_0$ iff $T>t_0$ is a UMP level $\alpha$ test, where $\alpha = P_{\theta_0}(T > t_0)$.
