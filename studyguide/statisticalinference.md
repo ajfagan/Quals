@@ -1,3 +1,4 @@
+$`\usepackage{amsmath}`$
 # Statistical Inference - All sources from Casella-Berger
 
 TODO
