@@ -1,10 +1,13 @@
 # Study guide for quals 2023 - Option B
 
 TODO:
-- [ ] Complete discrete distributions 
-- [ ] Complete continuous Distributions
-- [ ] Multivariate and linear and quadratic forms
-- [ ] Finish Syllabus
+- [ ] Probability Theory
+    - [ ] Complete discrete distributions 
+    - [ ] Complete continuous Distributions
+    - [ ] Multivariate and linear and quadratic forms
+- [ ] Statistical Inference
+- [ ] Linear and Generalized Linear Models
+- [ ] Experimental Design and Applications
 
 # Syllabus
 
@@ -138,3 +141,67 @@ $$
 ### Location and Scale Families (3.5)
 
 ### Multivariate normal and linear and quadratic forms
+
+### Convergence (5.5)
+
+Convergence in probability:  (5.5.1)
+- A sequence of random variables $X_1, X_2, \ldots$ converges in probability to a random variable $X$, denoted $X_n \rightarrow_p X$, if, for every $\varepsilon >0$, 
+$$
+\lim_{n\rightarrow\infty}P(|X_n - X| < \varepsilon) = 1
+$$
+
+Convergence almost surely: (5.5.5)
+- A sequence of random variable $X_1, X_2,\ldots$ converges almost surely to $X$, denoted $X_n \rightarrow_{a.s.} X$, if for every $\varepsilon > 0$,
+$$
+P\left(\lim_{n\rightarrow\infty}|X_n - X| < \varepsilon\right) = 1.
+$$
+
+Convergence in distribution: (5.5.10)
+- A sequence of random variables $X_1,X_2,\ldots$ converges in distribution to $X$, denoted $X_n \rightarrow_d X$, if, for all continuity points of $F_X(x)$,
+$$
+\lim_{n\rightarrow\infty}F_{X_n}(x) = F_X(x)
+$$
+
+Important results
+- $X_n \rightarrow_{a.s.} X \implies X_n \rightarrow_p X$ 
+- $X_n \rightarrow_p X \implies X_n \rightarrow_d X$
+- If $\mu$ is a constant and $X_n \rightarrow_p \mu \implies X_n \rightarrow_d\mu$
+
+### Laws of Large Numbers (5.5)
+
+Weak Law of Large Numbers (WLLN): (5.5.2)
+- Let $X_1, X_2, \ldots$ be iid random variable with $\mathbb EX_i$ and $\mathbb VX_i = \sigma^2<\infty$. Then $\bar X_n \rightarrow_p \mu$. 
+
+Strong Law of Large Number (SLLN): (5.5.9)
+- Let $X_1, X_2, \ldots$ be iid random variable with $\mathbb EX_i$ and $\mathbb VX_i = \sigma^2<\infty$. Then $\bar X_n \rightarrow_{a.s.} \mu$. 
+
+### Central limit theorem (5.5)
+Let $X_1, X_2, \ldots$ be a sequence of iid random variables with $\mathbb EX_i = \mu$ and $\mathbb VX_i = \sigma^2 < \infty$. Then $$\sqrt{n}(\bar X_n - \mu)/\sigma \rightarrow_d N(0,1).$$
+
+### Convergence of Transformations (5.5)
+
+Convergence in probability of continuous functions: (5.5.4)
+- $X_n\rightarrow_pX, h$ is continuous $\implies h(X_n) \rightarrow_p h(X)$ 
+
+### Slutsky Theorem (5.5)
+Slutsky Theorem (5.5.17)
+-  $X_n \rightarrow_d X, Y_n\rightarrow_p a$ for some constant $a$ implies
+    1. $Y_nX_n \rightarrow_d aX$ 
+    2. $X_n + Y_n \rightarrow_d X + a$
+
+### Delta's Method (5.5)
+Delta's Method (5.5.24)
+- Let $Y_n$ such that $\sqrt{n}(Y_n - \theta) \rightarrow_d N(0, \sigma^2)$. Then for a function $g$ and a value $\theta$, suppose that $g'(\theta)$ exists and is not 0. Then
+$$
+\sqrt{n}[g(Y_n) - g(\theta)] \rightarrow_d N(0, \sigma^2[g'(\theta)]^2)
+$$
+Second-order Delta's Method (5.5.26)
+- Let $Y_n$ such that $\sqrt{n}(Y_n - \theta) \rightarrow_d N(0, \sigma^2)$. Then for a function $g$ and a value $\theta$, suppose that $g'(\theta) = 0$ and $g''(\theta)$ exists and is not 0. Then
+$$
+n[g(Y_n) - g(\theta)] \rightarrow_d \sigma^2\frac{g''(\theta)}{2}\chi_1^2
+$$
+Multivariate Delta's Method (5.5.28)
+- Let $X_1, \ldots, X_n$ be a random sample with $\mathbb E X_{ij} = \mu_i$ and ${\rm Cov}(X_{ik}, X_{jk}) = \sigma_{ij}$. For a given function $g$ with continuous first partial dervatives and a specific $\mu = (\mu_1, \ldots, \mu_p)$ for which $\tau^2 = \sum\sum\sigma_{ij}\frac{\partial g(\mu)}{\partial \mu_i}\frac{\partial g(\mu)}{\partial \mu_j} > 0$,
+$$
+\sqrt{n}[g(\bar X_1, \ldots \bar X_s) - g(\mu_1, \ldots, \mu_p)] \rightarrow_d N(0, \tau^2).
+$$
