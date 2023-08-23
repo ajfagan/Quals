@@ -205,3 +205,5 @@ Multivariate Delta's Method (5.5.28)
 $$
 \sqrt{n}[g(\bar X_1, \ldots \bar X_s) - g(\mu_1, \ldots, \mu_p)] \rightarrow_d N(0, \tau^2).
 $$
+
+## Statistical Inference
