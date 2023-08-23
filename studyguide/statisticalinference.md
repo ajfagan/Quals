@@ -362,3 +362,56 @@ $$
 P(T\geq t|\theta_U(t)) = \alpha_1, \hspace{1em} P(T\leq t|\theta_L(t)) = \alpha_2.
 $$
 Then the random interval $\left[\theta_L(T), \theta_U(T)\right]$ is a $1 - \alpha$ confidence interval for $\theta$. 
+
+
+## Consistency (10.1.1)
+
+**Consistency (10.1.1)**
+
+A sequence of estimators $W_n$ is a _consistent_ sequence of estimators of the parameter $\theta$ if $W_n \to_p \theta$. 
+
+**Consistency of MLE's (10.1.6)**
+
+If $\hat\theta$ is the MLE of $\theta$, then $\tau(\hat\theta)$ is a consistent estimator of $\tau(\theta)$.
+
+## Asymptotic Normality and Efficiency (10.1.2)
+
+**Limiting variance (10.1.7)**
+
+For an estimator $T_n$, if $\lim_{n\to\infty}k_n\mathbb VT_n = \tau^2 < \infty$, where $\{k_n\}$ is a sequence of constants, then $\tau^2$ is the _limiting variance_.
+
+**Asymptotic variance (10.1.9)**
+
+For an estimator $T_n$, suppose that $k_n(T_n - \tau(\theta)) \to_d N(0, \sigma^2)$. $\sigma^2$ is called the _asymptotic variance_ of $T_n$.
+
+**Asymptotically efficient (10.1.11)**
+
+A sequence of estimators $W_n$ is _asymptotically efficient_ for a parameter $\tau(\theta)$ if $\sqrt{n}\left[W_n - \tau(\theta)\right] \to_d N(0, \nu(\theta))$ and
+
+$$
+\nu(\theta) = \frac{\left[\tau'(\theta)\right]^2}{I_n(\theta)}.
+$$
+
+That is, the asymptotic variance of $W_n$ achieves the Cramer-Rao lower bound. 
+
+**Asymptotic Efficiency of MLEs (10.1.12)**
+
+If $\hat\theta$ is the MLE of $\theta$, then $\tau(\hat\theta)$ is a consistent and asymptotically efficient estimator of $\tau(\theta)$.
+
+**Asymptotic relative efficiency (10.1.16)**
+
+If two estimators $W_n$ and $V_n$ satisfy
+
+$$
+\sqrt{n}\left[ W_n - \tau(\theta)\right] \to_d N(0, \sigma_W^2)
+$$
+
+$$
+\sqrt{n}\left[ V_n - \tau(\theta)\right] \to_d N(0, \sigma_V^2)
+$$
+
+then the _asymptotic relative efficiency_ (ARE) of $V_n$ wrt $W_n$ is
+
+$$
+{\rm ARE}(V_n, W_n) = \frac{\sigma_W^2}{\sigma_V^2}.
+$$
