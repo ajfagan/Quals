@@ -1,7 +1,9 @@
 # Study guide for quals 2023 - Option B
 
 TODO:
+- [ ] Complete discrete distributions 
 - [ ] Complete continuous Distributions
+- [ ] Multivariate and linear and quadratic forms
 - [ ] Finish Syllabus
 
 # Syllabus
@@ -67,7 +69,7 @@ Important Results:
 
 ### Useful distributions
 
-#### Discrete distributions
+#### Discrete distributions (3.2)
 - Bernoulli: The 0/1 distribution with $p$ being the probability of $1$ 
     - parameters: $p$
     - Mass functions
@@ -109,7 +111,30 @@ Important Results:
         - Variance: $\lambda$
     - mgf: $\exp\{\lambda(e^t - 1)\}$
 
-#### Continuous Distributions
+#### Continuous Distributions (3.3)
 
+### Exponential and location-scale families (3.4)
 
+Important Definitions:
+- A family of pdfs or pmfs is called an exponential family if it can be expressed as
+$$
+f(x|\theta) = h(x)c(\theta)\exp\left(\eta(\theta)'T(x)\right)
+$$
+or, equivalently
+$$
+\log f(x|\theta) = \log h(x) - \log c(\theta) + \eta(\theta)'T(x)
+$$
+- A curved exponential family is one whose dimension $d$ is smaller than the number of parameters $k$. If $d=k$, then the family is a full exponential family. 
 
+Important Results:
+- If $X$ is a random variable with pdf in an exponential family, then 
+$$
+\mathbb E\frac{\partial}{\partial \theta}\eta(\theta)'T(x) = - \frac{\partial}{\partial \theta}\log c(\theta)
+$$
+$$
+\mathbb V\frac{\partial}{\partial \theta}\eta(\theta)'T(x) = - \frac{\partial^2}{\partial \theta^2}\log c(\theta) - \mathbb{E}\left(\frac{\partial^2}{\partial\theta^2}\eta(\theta)\right)'T(x)
+$$
+
+### Location and Scale Families (3.5)
+
+### Multivariate normal and linear and quadratic forms
