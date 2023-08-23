@@ -31,6 +31,7 @@ Important Results:
         f_X(g^{-1}(y))\left|\frac{d}{dy}g^{-1}(y) \right|, &y\in\mathcal{Y}\\
         0, & otherwise. \end{cases} 
     $$
+    
     $$
     a + b
     $$
