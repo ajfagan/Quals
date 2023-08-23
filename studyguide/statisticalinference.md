@@ -115,3 +115,4 @@ $$
 An estimator $`W^*`$ is a uniformly minimum variance unbiased estimator (UMVUE) of $\tau(\theta)$ if it satisfies $`\mathbb EW^* = \tau(\theta)`$ for all $\theta$ (it's unbiased) and, for any other estimator $W$ with $\mathbb E_\theta W = \tau(\theta)$, we have $`\mathbb V_\theta W^*\leq\mathbb V_\theta W`$ for all $\theta$. 
 
 ## Information inequality (7.3.2)
+
