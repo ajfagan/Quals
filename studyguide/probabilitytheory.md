@@ -48,9 +48,9 @@ Important Results:
     \end{cases}
     $$
 
-### Expectations (2.2)
+## Expectations (2.2)
 
-### Moment generating functions (2.3)
+## Moment generating functions (2.3)
 
 Important definitions:
 
@@ -64,9 +64,9 @@ Important Results:
         1. If $X$ and $Y$ have bounded support, then $F_X(u) = F_Y(u)$ for all $u$ $\iff$ $\mathbb EX^r  =\mathbb EY^r$ for all integers $r = 0, 1, \ldots$
         2. If the moment generating functions exist and $M_X(t) = M_Y(t)$ for all $t$ in some neighborhood of 0, then $F_X(u) = F_Y(u)$ for all $u$.
 
-### Useful distributions
+## Useful distributions
 
-#### Discrete distributions (3.2)
+### Discrete distributions (3.2)
 - Bernoulli: The 0/1 distribution with $p$ being the probability of $1$ 
     - parameters: $p$
     - Mass functions
@@ -108,9 +108,9 @@ Important Results:
         - Variance: $\lambda$
     - mgf: $\exp\{\lambda(e^t - 1)\}$
 
-#### Continuous Distributions (3.3)
+### Continuous Distributions (3.3)
 
-### Exponential and location-scale families (3.4)
+## Exponential and location-scale families (3.4)
 
 Important Definitions:
 - A family of pdfs or pmfs is called an exponential family if it can be expressed as
@@ -132,11 +132,11 @@ $$
 \mathbb V\frac{\partial}{\partial \theta}\eta(\theta)'T(x) = - \frac{\partial^2}{\partial \theta^2}\log c(\theta) - \mathbb{E}\left(\frac{\partial^2}{\partial\theta^2}\eta(\theta)\right)'T(x)
 $$
 
-### Location and Scale Families (3.5)
+## Location and Scale Families (3.5)
 
-### Multivariate normal and linear and quadratic forms
+## Multivariate normal and linear and quadratic forms
 
-### Convergence (5.5)
+## Convergence (5.5)
 
 Convergence in probability:  (5.5.1)
 - A sequence of random variables $X_1, X_2, \ldots$ converges in probability to a random variable $X$, denoted $X_n \rightarrow_p X$, if, for every $\varepsilon >0$, 
@@ -161,7 +161,7 @@ Important results
 - $X_n \rightarrow_p X \implies X_n \rightarrow_d X$
 - If $\mu$ is a constant and $X_n \rightarrow_p \mu \implies X_n \rightarrow_d\mu$
 
-### Laws of Large Numbers (5.5)
+## Laws of Large Numbers (5.5)
 
 Weak Law of Large Numbers (WLLN): (5.5.2)
 - Let $X_1, X_2, \ldots$ be iid random variable with $\mathbb EX_i$ and $\mathbb VX_i = \sigma^2<\infty$. Then $\bar X_n \rightarrow_p \mu$. 
@@ -169,21 +169,21 @@ Weak Law of Large Numbers (WLLN): (5.5.2)
 Strong Law of Large Number (SLLN): (5.5.9)
 - Let $X_1, X_2, \ldots$ be iid random variable with $\mathbb EX_i$ and $\mathbb VX_i = \sigma^2<\infty$. Then $\bar X_n \rightarrow_{a.s.} \mu$. 
 
-### Central limit theorem (5.5)
+## Central limit theorem (5.5)
 Let $X_1, X_2, \ldots$ be a sequence of iid random variables with $\mathbb EX_i = \mu$ and $\mathbb VX_i = \sigma^2 < \infty$. Then $$\sqrt{n}(\bar X_n - \mu)/\sigma \rightarrow_d N(0,1).$$
 
-### Convergence of Transformations (5.5)
+## Convergence of Transformations (5.5)
 
 Convergence in probability of continuous functions: (5.5.4)
 - $X_n\rightarrow_pX, h$ is continuous $\implies h(X_n) \rightarrow_p h(X)$ 
 
-### Slutsky Theorem (5.5)
+## Slutsky Theorem (5.5)
 Slutsky Theorem (5.5.17)
 -  $X_n \rightarrow_d X, Y_n\rightarrow_p a$ for some constant $a$ implies
     1. $Y_nX_n \rightarrow_d aX$ 
     2. $X_n + Y_n \rightarrow_d X + a$
 
-### Delta's Method (5.5)
+## Delta's Method (5.5)
 Delta's Method (5.5.24)
 - Let $Y_n$ such that $\sqrt{n}(Y_n - \theta) \rightarrow_d N(0, \sigma^2)$. Then for a function $g$ and a value $\theta$, suppose that $g'(\theta)$ exists and is not 0. Then
 $$
@@ -199,5 +199,3 @@ Multivariate Delta's Method (5.5.28)
 $$
 \sqrt{n}[g(\bar X_1, \ldots \bar X_s) - g(\mu_1, \ldots, \mu_p)] \rightarrow_d N(0, \tau^2).
 $$
-
-## Statistical Inference
