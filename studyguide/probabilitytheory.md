@@ -3,6 +3,7 @@
 TODO:
 - [ ] Complete discrete distributions 
 - [ ] Complete continuous Distributions
+- [ ] Indicate family(s) each distribution belongs to 
 - [ ] Multivariate and linear and quadratic forms
 
 
