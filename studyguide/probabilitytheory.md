@@ -119,6 +119,7 @@ Important Results:
 
 Important Definitions:
 - A family of pdfs or pmfs is called an exponential family if it can be expressed as
+<!---- Break ------>
 $$
 f(x|\theta) = h(x)c(\theta)\exp\left(\eta(\theta)'T(x)\right)
 $$
