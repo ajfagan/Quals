@@ -81,7 +81,7 @@ Important Results:
         - pmf: $`f_X(x) = \begin{pmatrix}n \\ x\end{pmatrix} p^x(1-p)^{n-x}, x = 0, \ldots, n`$
         - cmf: $`
         F_X(x) = \begin{cases}
-            \sum_{i=0}^{\lfloor{x}\rfloor}f_X(i),& 0\leq x < n\\
+            {\sum}_{i=0}^{\lfloor{x}\rfloor}f_X(i),& 0\leq x < n\\
             1, &x >n
             \end{cases}
         `$
@@ -103,7 +103,7 @@ Important Results:
     - Parameters: $\lambda$
     - Mass functions: 
         - pmf: $f_X(x) = \frac{\lambda^xe^{-\lambda}}{x!}$
-        - cmf: $F_X(x) = e^{-\lambda}\sum_{i=0}^{\lfloor x \rfloor}\frac{\lambda^i}{i!}$
+        - cmf: $F_X(x) = e^{-\lambda}{\sum}_{i=0}^{\lfloor x \rfloor}\frac{\lambda^i}{i!}$
     - Moments:
         - Mean: $\lambda$
         - Variance: $\lambda$
@@ -115,7 +115,7 @@ Important Results:
 
 Important Definitions:
 - A family of pdfs or pmfs is called an exponential family if it can be expressed as
-<!---- Break ------>
+
 $$
 f(x|\theta) = h(x)c(\theta)\exp\left(\eta(\theta)'T(x)\right)
 $$
@@ -128,9 +128,11 @@ $$
 
 Important Results:
 - If $X$ is a random variable with pdf in an exponential family, then 
+
 $$
 \mathbb E\frac{\partial}{\partial \theta}\eta(\theta)'T(x) = - \frac{\partial}{\partial \theta}\log c(\theta)
 $$
+
 $$
 \mathbb V\frac{\partial}{\partial \theta}\eta(\theta)'T(x) = - \frac{\partial^2}{\partial \theta^2}\log c(\theta) - \mathbb{E}\left(\frac{\partial^2}{\partial\theta^2}\eta(\theta)\right)'T(x)
 $$
@@ -143,16 +145,21 @@ $$
 
 Convergence in probability:  (5.5.1)
 - A sequence of random variables $X_1, X_2, \ldots$ converges in probability to a random variable $X$, denoted $X_n \rightarrow_p X$, if, for every $\varepsilon >0$, 
+
 $$
 \lim_{n\rightarrow\infty}P(|X_n - X| < \varepsilon) = 1
 $$
 
 Convergence almost surely: (5.5.5)
 - A sequence of random variable $X_1, X_2,\ldots$ converges almost surely to $X$, denoted $X_n \rightarrow_{a.s.} X$, if for every $\varepsilon > 0$,
-$$P\left(\lim_{n\rightarrow\infty}|X_n - X| < \varepsilon\right) = 1.$$
+
+$$
+P\left(\lim_{n\rightarrow\infty}|X_n - X| < \varepsilon\right) = 1.
+$$
 
 Convergence in distribution: (5.5.10)
 - A sequence of random variables $X_1,X_2,\ldots$ converges in distribution to $X$, denoted $X_n \rightarrow_d X$, if, for all continuity points of $F_X(x)$,
+
 $$
 \lim_{n\rightarrow\infty}F_{X_n}(x) = F_X(x)
 $$
@@ -171,7 +178,11 @@ Strong Law of Large Number (SLLN): (5.5.9)
 - Let $X_1, X_2, \ldots$ be iid random variable with $\mathbb EX_i$ and $\mathbb VX_i = \sigma^2<\infty$. Then $\bar X_n \rightarrow_{a.s.} \mu$. 
 
 ## Central limit theorem (5.5)
-Let $X_1, X_2, \ldots$ be a sequence of iid random variables with $\mathbb EX_i = \mu$ and $\mathbb VX_i = \sigma^2 < \infty$. Then $$\sqrt{n}(\bar X_n - \mu)/\sigma \rightarrow_d N(0,1).$$
+Let $X_1, X_2, \ldots$ be a sequence of iid random variables with $\mathbb EX_i = \mu$ and $\mathbb VX_i = \sigma^2 < \infty$. Then 
+
+$$
+\sqrt{n}(\bar X_n - \mu)/\sigma \rightarrow_d N(0,1).
+$$
 
 ## Convergence of Transformations (5.5)
 
@@ -187,18 +198,21 @@ Slutsky Theorem (5.5.17)
 ## Delta's Method (5.5)
 Delta's Method (5.5.24)
 - Let $Y_n$ such that $\sqrt{n}(Y_n - \theta) \rightarrow_d N(0, \sigma^2)$. Then for a function $g$ and a value $\theta$, suppose that $g'(\theta)$ exists and is not 0. Then
+
 $$
 \sqrt{n}[g(Y_n) - g(\theta)] \rightarrow_d N(0, \sigma^2[g'(\theta)]^2)
 $$
 
 Second-order Delta's Method (5.5.26)
 - Let $Y_n$ such that $\sqrt{n}(Y_n - \theta) \rightarrow_d N(0, \sigma^2)$. Then for a function $g$ and a value $\theta$, suppose that $g'(\theta) = 0$ and $g''(\theta)$ exists and is not 0. Then
+
 $$
 n[g(Y_n) - g(\theta)] \rightarrow_d \sigma^2\frac{g''(\theta)}{2}\chi_1^2
 $$
 
 Multivariate Delta's Method (5.5.28)
 - Let $X_1, \ldots, X_n$ be a random sample with $\mathbb E X_{ij} = \mu_i$ and ${\rm Cov}(X_{ik}, X_{jk}) = \sigma_{ij}$. For a given function $g$ with continuous first partial dervatives and a specific $\mu = (\mu_1, \ldots, \mu_p)$ for which $\tau^2 = \sum\sum\sigma_{ij}\frac{\partial g(\mu)}{\partial \mu_i}\frac{\partial g(\mu)}{\partial \mu_j} > 0$,
+
 $$
 \sqrt{n}[g(\bar X_1, \ldots \bar X_s) - g(\mu_1, \ldots, \mu_p)] \rightarrow_d N(0, \tau^2).
 $$
