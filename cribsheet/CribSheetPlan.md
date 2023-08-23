@@ -166,3 +166,4 @@ If $f(x|\theta)$ satisfies regularity conditions, which are always satisfied in 
 $$
 I(\theta) = \mathbb E_\theta \left(\left(\frac{\partial}{\partial\theta}\log f(X|\theta)\right)^2\right) = -\mathbb E_\theta \left(\frac{\partial^2}{\partial\theta^2}\log f(X|\theta)\right)
 $$
+

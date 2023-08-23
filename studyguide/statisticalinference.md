@@ -162,3 +162,17 @@ Let $W$ be any unbiased estimator of $\tau(\theta)$, and let $T$ be a sufficient
 **Connecting completeness-sufficiency with UMVUE**
 
 If $T$ is a complete, sufficient statistic for a parameter $\theta$, then $\phi(T)$ is the UMVUE of $\mathbb E \phi(T)$.
+
+## Likelihood ratio tests (8.2.1)
+
+## Evaluation of tests and Neyman-Pearson Lemma (8.3)
+
+**Power function**
+
+The power function of a hypothesis test with rejection region $R$ is the function of $\theta$ defined by $\beta(\theta) = P_\theta (X\in R)$.
+
+**Size and level**
+
+For $0\leq\alpha\leq 1$, a test with power function $\beta(\theta)$ is a _size_ $\alpha$ test if $\sup_{\theta\in\Theta_0}\beta(\theta) = \alpha$.
+
+For $0\leq\alpha\leq 1$, a test with power function $\beta(\theta)$ is a _level_ $\alpha$ test if $\sup_{\theta\in\Theta_0}\beta(\theta) \leq \alpha$.
