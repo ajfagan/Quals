@@ -25,6 +25,7 @@ Important Results:
     $$\mathcal{Y} = \{y : \exists x\in\mathcal{X}, y = g(x)\}.$$
 
     Suppose that $f_X(x)$ is continuous on $\mathcal{X}$ and that $g^{-1}(y)$ has a continuous derivative on $\mathcal{Y}$. Then the pdf of $Y$ is
+    
     $$
     f_Y(y) = \begin{cases}
     f_X(g^{-1}(y))\left|\frac{d}{dy}g^{-1}(y)\right|, &y\in\mathcal{Y}\\
