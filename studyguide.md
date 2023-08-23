@@ -1,18 +1,22 @@
 # Study guide for quals 2023 - Option B
 
-## Syllabus
+TODO:
+- [ ] Complete continuous Distributions
+- [ ] Finish Syllabus
 
-### Probability Theory - All sources from Casella-Berger
+# Syllabus
 
-#### Probability and conditional probability (1.2 - 1.3)
+## Probability Theory - All sources from Casella-Berger
 
-#### Correlation and independence (1.3)
+### Probability and conditional probability (1.2 - 1.3)
 
-#### Random Variable (1.4)
+### Correlation and independence (1.3)
 
-#### Distributions (1.5 - 1.6)
+### Random Variable (1.4)
 
-#### Transformations (2.1)
+### Distributions (1.5 - 1.6)
+
+### Transformations (2.1)
 
 Important Results:
 
@@ -45,9 +49,9 @@ Important Results:
     \end{cases}
     $$
 
-#### Expectations (2.2)
+### Expectations (2.2)
 
-#### Moment generating functions (2.3)
+### Moment generating functions (2.3)
 
 Important definitions:
 
@@ -61,4 +65,51 @@ Important Results:
         1. If $X$ and $Y$ have bounded support, then $F_X(u) = F_Y(u)$ for all $u$ $\iff$ $\mathbb EX^r  =\mathbb EY^r$ for all integers $r = 0, 1, \ldots$
         2. If the moment generating functions exist and $M_X(t) = M_Y(t)$ for all $t$ in some neighborhood of 0, then $F_X(u) = F_Y(u)$ for all $u$.
 
-- Convergence of mgfs (Thm 2.3.12)
+### Useful distributions
+
+#### Discrete distributions
+- Bernoulli: The 0/1 distribution with $p$ being the probability of $1$ 
+    - parameters: $p$
+    - Mass functions
+        - pmf: $f_X(x|p)$ = $pI(x = 1) + (1 - p)I(x = 0)$
+        - cmf: $F_X(x|p) = (1-p)I(0\leq x < 1) + pI(x > 1)$
+    - Moments:
+        - Mean: $p$
+        - Variance: $p(1-p)$
+    - mgf: $(1 - p) + pe^t$
+- Binomial: The sum of $n$ iid Bernoulli processes with mean $p$
+    - parameters: $n,p$
+    - Mass functions
+        - pmf: $f_X(x) = \begin{pmatrix}n \\ x\end{pmatrix} p^x(1-p)^{n-x}, x = 0, \ldots, n$
+        - cmf: $F_X(x) = \begin{cases}
+            \sum_{i=0}^{\lfloor{x}\rfloor}f_X(i),& 0\leq x < n\\
+            1, &x >n
+            \end{cases}$
+    - Moments:
+        - Mean: $np$
+        - Variance: $np(1-p)$
+    - mgf: $((1 - p) + pe^t)^n$
+- Hypergeometric distribution: Probability of $k$ successes in $n$ draws from a population of size $N$ containing $K$ successes
+    - parameters: $k, n, N, K$
+    - Mass functions
+        - pmf: 
+        $$
+        \frac{\begin{pmatrix}K\\k\end{pmatrix}\begin{pmatrix}N-n \\ n-k\end{pmatrix}}{\begin{pmatrix}N\\ n\end{pmatrix}}
+        $$
+    - Moments:
+        - Mean = $n\frac{K}{N}$
+        - Variance = $n\frac{K}{N}\frac{N-K}{N}\frac{N-n}{N-1}$
+- Poisson: Probability of a certain number of events occuring in a time interval, given the average number is $\lambda$
+    - Parameters: $\lambda$
+    - Mass functions: 
+        - pmf: $f_X(x) = \frac{\lambda^xe^{-\lambda}}{x!}$
+        - cmf: $F_X(x) = e^{-\lambda}\sum_{i=0}^{\lfloor x \rfloor}\frac{\lambda^i}{i!}$
+    - Moments:
+        - Mean: $\lambda$
+        - Variance: $\lambda$
+    - mgf: $\exp\{\lambda(e^t - 1)\}$
+
+#### Continuous Distributions
+
+
+
