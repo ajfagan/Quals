@@ -45,6 +45,6 @@ Showing minimal sufficiency (6.2.13)
 Completeness (6.2.21)
 - Let 
 
-```{definition, 6.2.21, name = "Completeness"}
-Let $f(t|\theta)$ be a family of pdfs for a statistic
+```{theorem, 6.2.21, name = "Completeness"}
+Let $`f(t|\theta)`$ be a family of pdfs for a statistic
 ```
