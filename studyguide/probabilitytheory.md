@@ -26,10 +26,12 @@ Important Results:
 
     Suppose that $f_X(x)$ is continuous on $\mathcal{X}$ and that $g^{-1}(y)$ has a continuous derivative on $\mathcal{Y}$. Then the pdf of $Y$ is
     
-    $$f_Y(y) = \begin{cases}
+    ```math
+    f_Y(y) = \begin{cases}
     f_X(g^{-1}(y))\left|\frac{d}{dy}g^{-1}(y)\right|, &y\in\mathcal{Y}\\
     0, &otherwise.
-    \end{cases}$$
+    \end{cases}
+    ``````
 
 - Theorem 2.18 (Generalized Change of Variables)
     - Let $X$ have pdf $f_X(x)$ and let $Y = g(X)$. Define the sample space $\mathcal{X}$ as in Theorem 2.15. Suppose $\exists A_0,\ldots, A_k$ a partition of $\mathcal{X}$ such that $P(x\in A_0) = 0$ and $f_X(x)$ is continuous on each $A_i$. Further, suppose $\exists g_1(x), \ldots,g_k(x)$ , defined on $A_1, \ldots, A_k$ respectively, satisfying 
