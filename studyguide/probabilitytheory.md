@@ -79,12 +79,12 @@ Important Results:
     - parameters: $n,p$
     - Mass functions
         - pmf: $`f_X(x) = \begin{pmatrix}n \\ x\end{pmatrix} p^x(1-p)^{n-x}, x = 0, \ldots, n`$
-        - cmf: $
+        - cmf: $``
         F_X(x) = \begin{cases}
             \sum_{i=0}^{\lfloor{x}\rfloor}f_X(i),& 0\leq x < n\\
             1, &x >n
             \end{cases}
-        $
+        `$
     - Moments:
         - Mean: $np$
         - Variance: $np(1-p)$
