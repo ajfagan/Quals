@@ -261,3 +261,104 @@ $$
 Then $p(X)$ is a valid $p$-value.
 
 ## Duality between tests and confidence sets (9.1)
+
+**Interval estimation (9.1.1)**
+
+An _interval estimate_ of a real-valued parameter $\theta$ is any pair of functions $L(X)$ and $U(X)$ of a sample that satisfy $L(x) \leq U(x)$ for all $x\in\mathcal{X}$. If $X = x$ is observed, the inference $L(x) \leq \theta \leq U(x)$ is made. The random interval $\left[L(X), U(X)\right]$ is called an _interval estimator_.
+
+**Coverage probability (9.1.4)**
+
+For an interval estimator $\left[L(X), U(X)\right]$ of a parameter $\theta$, the _coverage probability_ is the probability that the random interval $\left[L(X),U(X)\right]$ covers the true parameter $\theta$. Denoted
+
+$$
+P_\theta(\theta\in \left[L(X), U(X)\right]).
+$$
+
+**Coverage coefficient (9.1.5)**
+
+For an interval estimator $\left[L(X),U(X)\right]$ of a parameter $\theta$, the _confidence coefficient_ of the interval estimator is the infimum of the coverage probabilities,
+
+$$
+\inf_\theta P_\theta(\theta \in \left[L(X), U(X)\right]).
+$$
+
+**Confidence sets**
+
+A $1 - \alpha$ _confidence set_ is a random set generated from a sample $X$, $C(X)$ satisfying 
+
+$$
+\inf_\theta P_\theta(\theta \in C(X)) = 1 - \alpha.
+$$
+
+**Inverting a test statistic**
+
+For every $\theta_0\in\Theta$, let $A(\theta_0)$ be the acceptance region of a level $\alpha$ test of $H_0:\theta = \theta_0$. For each $x\in\mathcal{X}$, define a set $C(x)$ in the parameter space by
+
+$$
+C(x) = \{\theta_0 : x\in A(\theta_0)\}.
+$$
+
+Then the random set $C(X)$ is a $1-\alpha$ confidence set. Conversely, let $C(X)$ be a $1 - \alpha$ confidence set. For any $\theta_0\in\Theta$, define
+
+$$
+A(\theta_0) = \{x : \theta_0\in C(x)\}.
+$$
+
+Then $A(\theta_0)$ is the acceptance region of a level $\alpha$ test of $H_0: \theta = \theta_0$.
+
+## Pivots (9.2.2)
+
+**Pivots (9.2.6)**
+
+A random variable $Q(X, \theta)$ is a _pivotal quantity_ (or _pivot_) if the distribution of $Q(X,\theta)$ is independent of all parameters. That is, if $X\sim F(x|\theta)$, then $Q(X,\theta)$ has the same distribution for all values of $\theta.$
+
+**In location-scale families (9.2.7)**
+
+|Form of pdf                                    | Type of pdf     | Pivot                         |
+|-----------------------------------------------|-----------------|-------------------------------|
+|$f(x-\mu)$                                     | Location        | $\bar X - \mu $               |
+| $\sigma^{-1}f(\frac{x}{\sigma})$              | Scale           | $\frac{\bar X}{\sigma}$       |
+| $\sigma^{-1}f(\frac{x - \mu}{\sigma})$        | Location-scale  | $\frac{\bar X - \mu}{\sigma}$ |
+
+**Constructing confidence sets from pivots**
+
+A pivot, $Q$, leads to a confidence set of the form
+
+$$
+C(x) = \{\theta_0: a\leq Q(x, \theta_0) \leq b\},
+$$
+
+and if $Q$ is a monotone function of $\theta$ for every $x$ (as in location-scale families), then $C(x)$ is an interval.
+
+**Pivoting a continuous cdf (9.2.12)**
+
+Let $T$ be a statistic with continuous cdf $F_T(t | \theta)$. Let $\alpha_1 + \alpha_2 = \alpha$ with $0\leq\alpha\leq1$ be fixed values. Suppose that for each $t\in\mathcal{T}$, the functions $\theta_L(t)$ and $\theta_U(t)$ can be defined as follows.
+1. If $F_T(t|\theta)$ is a decreasing function of $\theta$ for each $t$, define $\theta_L(t)$ and $\theta_U(t)$ by
+
+$$
+F_T(t|\theta_U(t)) = \alpha_1, \hspace{1em} F_T(t|\theta_L(t)) = 1 - \alpha_2.
+$$
+
+2. If $F_T(t|\theta)$ is an increasing function of $\theta$ for each $t$, define $\theta_L(t)$ and $\theta_U(t)$ by
+
+$$
+F_T(t|\theta_U(t)) = 1 - \alpha_2, \hspace{1em} F_T(t|\theta_L(t)) = \alpha_1.
+$$
+
+Then the random interval $\left[\theta_L(T), \theta_U(T)\right]$ is a $1 - \alpha$ confidence interval for $\theta$. 
+
+**Pivoting a discrete cdf (9.2.12)**
+
+Let $T$ be a discrete statistic with continuous cdf $F_T(t | \theta) = P(T\geq t | \theta)$. Let $\alpha_1 + \alpha_2 = \alpha$ with $0<\alpha<1$ be fixed values. Suppose that for each $t\in\mathcal{T}$, the functions $\theta_L(t)$ and $\theta_U(t)$ can be defined as follows.
+1. If $F_T(t|\theta)$ is a decreasing function of $\theta$ for each $t$, define $\theta_L(t)$ and $\theta_U(t)$ by
+
+$$
+P(T\leq t|\theta_U(t)) = \alpha_1, \hspace{1em} P(T\geq t|\theta_L(t)) = \alpha_2.
+$$
+
+2. If $F_T(t|\theta)$ is an increasing function of $\theta$ for each $t$, define $\theta_L(t)$ and $\theta_U(t)$ by
+
+$$
+P(T\geq t|\theta_U(t)) = \alpha_1, \hspace{1em} P(T\leq t|\theta_L(t)) = \alpha_2.
+$$
+Then the random interval $\left[\theta_L(T), \theta_U(T)\right]$ is a $1 - \alpha$ confidence interval for $\theta$. 
