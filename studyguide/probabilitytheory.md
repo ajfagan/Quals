@@ -1,27 +1,21 @@
-# Study guide for quals 2023 - Option B
+# Probability Theory - All sources from Casella-Berger
 
 TODO:
-- [ ] Probability Theory
-    - [ ] Complete discrete distributions 
-    - [ ] Complete continuous Distributions
-    - [ ] Multivariate and linear and quadratic forms
-- [ ] Statistical Inference
-- [ ] Linear and Generalized Linear Models
-- [ ] Experimental Design and Applications
+- [ ] Complete discrete distributions 
+- [ ] Complete continuous Distributions
+- [ ] Multivariate and linear and quadratic forms
 
-# Syllabus
 
-## Probability Theory - All sources from Casella-Berger
 
-### Probability and conditional probability (1.2 - 1.3)
+## Probability and conditional probability (1.2 - 1.3)
 
-### Correlation and independence (1.3)
+## Correlation and independence (1.3)
 
-### Random Variable (1.4)
+## Random Variable (1.4)
 
-### Distributions (1.5 - 1.6)
+## Distributions (1.5 - 1.6)
 
-### Transformations (2.1)
+## Transformations (2.1)
 
 Important Results:
 
