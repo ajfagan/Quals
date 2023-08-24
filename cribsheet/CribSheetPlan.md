@@ -218,7 +218,7 @@ $$
 
 **Monotone Likelihood Ratio**
 
-A family of pdf's $\{g(t|\theta): \theta\in\Theta\}$ for a univariate random variable $T$ with real-valued parameter $\theta$ has a _monotone likelihood ratio_ (MLR) if for every $\theta_2 > \theta_1, g(t, \theta_2) / g(t, \theta_1) is a monotone function of $t$ on the support $\{t : g(t|\theta_1) > 0 \hspace{1em} {\rm or} \hspace{1em} g(t|\theta_2) > 0\}$, where $c/0$ is defined as $\infty$ if $0< c$.
+A family of pdf's $\{g(t|\theta): \theta\in\Theta\}$ for a univariate random variable $T$ with real-valued parameter $\theta$ has a _monotone likelihood ratio_ (MLR) if for every $\theta_2 > \theta_1, g(t| \theta_2) / g(t| \theta_1)$ is a monotone function of $t$ on the support $\{t : g(t|\theta_1) > 0 \hspace{1em} {\rm or} \hspace{1em} g(t|\theta_2) > 0\}$, where $c/0$ is defined as $\infty$ if $0< c$.
 
 **Karlin-Rubin (8.3.17)**
 
@@ -246,3 +246,35 @@ where $s(\theta) = \frac{\partial}{\partial\theta}\log f(X|\theta)$ is the score
 It can be shown that $\mathbb E_\theta s(\theta) = 0$ and $\mathbb V_\theta s(\theta) = I_n(\theta)$,
 
 so $Z_s$ has mean 0 and variance 1, and, hence, converges to $N(0,1)$. 
+
+## Linear Regression
+
+**Gauss-Markov**
+
+When columns of $X$ are linearly independent, the unique BLUE among the class of linear unbiased estimators of $c'\beta$ is $c'\hat\beta$ where 
+
+$$
+\hat\beta = (X'X)^{-1}X'Y
+$$
+
+If $X$ does not have full column space, then
+
+$$
+\hat\theta = \argmin_{\theta\in{\rm Col}(X)}||c'Y - c'\theta||^2
+$$
+
+is the BLUE.
+
+**Estimable function**
+
+The parametric function $\lambda'\beta$ is _estimable_ if it has a linear unbiased estimator $t'Y$ for $\beta$
+
+Equivalently, it's estimable iff $\lambda \in {\rm Col}(X)$.
+
+**Distribution Theorem (Lecture 9 - STAT 849)**
+
+If $Y = X\beta + \varepsilon$, $X$ is a full rank matrix, ${\rm rank}(X) = p$ and $\varepsilon \sim N_n(0, \sigma^2I_n)$, then
+1. $\hat\beta \sim N_p(\beta, \sigma^2(X'X)^{-1})$
+2. $(\hat\beta - \beta)'X'X(\hat\beta - \beta) / \sigma^2 \sim \chi_p^2$
+3. $\hat\beta$ is independent of ${\rm RSS} = ||Y - X\hat\beta||^2$
+4. $\frac{\rm RSS}{\sigma^2}\sim \chi_{n-p}^2$.
