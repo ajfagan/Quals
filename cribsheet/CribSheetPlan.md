@@ -271,6 +271,12 @@ The parametric function $\lambda'\beta$ is _estimable_ if it has a linear unbias
 
 Equivalently, it's estimable iff $\lambda \in {\rm Col}(X)$.
 
+**Important fact of Normals**
+
+$\newcommand{\indep}{\perp \!\!\! \perp}$
+
+If $M \sim N_n(\mu\Sigma)$, then, for Matrices $A, B$, $AM\indep BM \iff A\Sigma B' = 0$.
+
 **Distribution Theorem (Lecture 9 - STAT 849)**
 
 If $Y = X\beta + \varepsilon$, $X$ is a full rank matrix, ${\rm rank}(X) = p$ and $\varepsilon \sim N_n(0, \sigma^2I_n)$, then
@@ -278,3 +284,43 @@ If $Y = X\beta + \varepsilon$, $X$ is a full rank matrix, ${\rm rank}(X) = p$ an
 2. $(\hat\beta - \beta)'X'X(\hat\beta - \beta) / \sigma^2 \sim \chi_p^2$
 3. $\hat\beta$ is independent of ${\rm RSS} = ||Y - X\hat\beta||^2$
 4. $\frac{\rm RSS}{\sigma^2}\sim \chi_{n-p}^2$.
+
+**Cochran's Theorem**
+
+If $M\sim N_n(0, I_n)$ and let $A$ be a symmetric matrix of rank $r$. Then $M'AM\sim\chi_r^2$ if $A$ is idempotent. 
+
+## Testing for outliers and influential points*
+
+**Leverage**
+
+If $H$ is the projection matrix in a linear model, then the _leverage_ is the value  $h_{ii}$. Large values of $h_{ii}$ will pull the fit towards $y_{i\cdot}$ and indicates outlying $X$ values.
+
+**Studentized residuals**
+
+Let 
+
+$$
+t_i = \frac{\hat\varepsilon_i}{\hat\sigma_{(i)}\sqrt{1 - h_{ii}}}
+$$
+
+where $\hat\sigma_{(i)}$ is the method of moments estimator of $\sigma$ when the $i^{th}$ data point is deleted. Then $|t_i| > 3$ is a good indicator for datapoint $i$ being an outlier. 
+
+Idea: tests if datapoint $i$ is within the prediction interval when the model is fit without it. 
+
+Detects outlying $y$ values, but doesn't necessarily indcate influence. 
+
+**Cook's distance**
+
+$$
+D_i = \frac{\left(\hat y - \hat y_{(i)}\right)'\left(\hat y - \hat y_{(i)}\right)}{p\hat\sigma^2}
+$$
+
+Values of $D_i > 1$ indicate that datapoint $i$ is influential. 
+
+**Variance Inflation Factor (VIF)**
+
+$$
+{\rm VIF}(\hat\beta_j) = \frac{\mathbb V(\hat\beta_j)_{\rm full}}{\mathbb V(\hat\beta_j)_{Y\sim X_j}} = \frac{1}{1 - R_{X_j|X_{-j}}^2}
+$$
+
+Values of $\rm VIF$ greater than 5 or 10 $\left(R_{X_j|X_{-j}}^2 > 0.8, 0.9\right)$ are frequently used as cutoffs. 
