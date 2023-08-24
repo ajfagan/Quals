@@ -324,3 +324,13 @@ $$
 $$
 
 Values of $\rm VIF$ greater than 5 or 10 $\left(R_{X_j|X_{-j}}^2 > 0.8, 0.9\right)$ are frequently used as cutoffs. 
+
+## Weighted least squares
+
+If $Y = X\beta + \varepsilon$, where $\mathbb V \varepsilon = \sigma^2\Sigma$ where $\sigma^2$ is unknown, but $\Sigma = SS'$ is known, OLS found by solving the regression
+
+$$
+S^{-1}Y = S^{-1}X\beta + S^{-1}\varepsilon
+$$
+
+where $S^{-1}\hat\varepsilon$ should be approximately iid. 
