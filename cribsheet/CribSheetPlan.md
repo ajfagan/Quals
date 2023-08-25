@@ -334,3 +334,22 @@ S^{-1}Y = S^{-1}X\beta + S^{-1}\varepsilon
 $$
 
 where $S^{-1}\hat\varepsilon$ should be approximately iid. 
+
+**Box-Cox transformation**
+
+For strictly positive responses (can add a constant to ensure), find the value of $\lambda$ that minimizes
+
+$$
+L(\lambda) = -\frac{n}{2}\log({\rm RSS}_\lambda / n) + (\lambda - 1)\sum\log y_i,
+$$
+
+where
+
+$$
+g_\lamda(y) = \begin{cases}
+\frac{y^\lambda - 1}{\lambda}, & \lambda \neq 0 \\
+\log y, & \lambda = 0
+\end{cases}
+$$
+
+and ${\rm RSS}_\lamda$ is the residual sum of squares when $g_\lambda(y)$ is the response. 
