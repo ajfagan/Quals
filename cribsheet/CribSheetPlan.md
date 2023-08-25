@@ -353,3 +353,42 @@ g_\lamda(y) = \begin{cases}
 $$
 
 and ${\rm RSS}_\lamda$ is the residual sum of squares when $g_\lambda(y)$ is the response. 
+
+## Pairwise Comparison
+
+**Tukey-Kramer**
+
+The Tukey-Kramer interval is defined as
+
+$$
+c'\bar \beta\hat - h \pm \frac{1}{\sqrt{2}} q_{k,n-k, \alpha}\times\sqrt{\hat \mathbb V c'\hat\beta}
+$$
+
+and it guarantees a level $\alpha$-test for all contrasts.
+
+## Model Selection
+
+**Mallow's $C_p$**
+
+Let $\mathcal{F}$ be the full model, and $\mathcal{M}$ a proposed reduced model. Then Mallow's $C_p$ is defined as
+
+$$
+C_p(\mathcal{M}) = \frac{{\rm SSE}(\mathcal{M})}{\hat\sigma^2} - n + 2\times p_\mathcal{M}
+$$
+
+where $p_\mathcal{M}$ is the number of parameters in the model $\mathcal{M}$, and $\hat\sigma^2 = {\rm SSE}(\mathcal{F}) / df_\mathcal{F}$
+
+Models should be favored if they have small $C_p$ close to $p$.
+
+**AIC: Akaike Information Criterion**
+
+$$
+AIC(\mathcal{M}) = -2\log L_\mathcal{M}(\hat\theta) + 2p_\mathcal{M}.
+$$
+
+
+**AIC: Akaike Information Criterion**
+
+$$
+BIC(\mathcal{M}) = -2\log L_\mathcal{M}(\hat\theta) + \log (n)p_\mathcal{M}.
+$$
