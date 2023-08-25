@@ -392,3 +392,21 @@ $$
 $$
 BIC(\mathcal{M}) = -2\log L_\mathcal{M}(\hat\theta) + \log (n)p_\mathcal{M}.
 $$
+
+## Penalized Regression
+
+**Ridge Regression**
+
+$$
+\min_\beta ||Y-X\beta||^2 + \lambda ||\beta||^2
+$$
+
+$$
+\hat\beta_\lambda = (X'X - \lambda I_p)^{-1}X'Y
+$$
+
+**Lasso Regression**
+
+$$
+\min_\beta ||Y - X\beta||^2 - \lambda ||\beta||_1
+$$
