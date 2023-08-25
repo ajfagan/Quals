@@ -346,13 +346,13 @@ $$
 where
 
 $$
-g_\lamda(y) = \begin{cases}
+g_\lambda(y) = \begin{cases}
 \frac{y^\lambda - 1}{\lambda}, & \lambda \neq 0 \\
 \log y, & \lambda = 0
 \end{cases}
 $$
 
-and ${\rm RSS}_\lamda$ is the residual sum of squares when $g_\lambda(y)$ is the response. 
+and ${\rm RSS}_\lambda$ is the residual sum of squares when $g_\lambda(y)$ is the response. 
 
 ## Pairwise Comparison
 
@@ -361,7 +361,7 @@ and ${\rm RSS}_\lamda$ is the residual sum of squares when $g_\lambda(y)$ is the
 The Tukey-Kramer interval is defined as
 
 $$
-c'\bar \beta\hat - h \pm \frac{1}{\sqrt{2}} q_{k,n-k, \alpha}\times\sqrt{\hat \mathbb V c'\hat\beta}
+c'\bar \beta\hat - h \pm \frac{1}{\sqrt{2}} q_{k,n-k, \alpha}\times\sqrt{\hat{\mathbb V} c'\hat\beta}
 $$
 
 and it guarantees a level $\alpha$-test for all contrasts.
@@ -409,4 +409,24 @@ $$
 
 $$
 \min_\beta ||Y - X\beta||^2 - \lambda ||\beta||_1
+$$
+
+## Misc.
+
+**Convexity**
+
+A function $f$ is _convex_ if, $\forall\lambda\in[0,1]$, $f(\lambda x + (1 - \lambda)y) \leq \lambda f(x) + (1 - \lambda)f(y)$ for all $x,y$ in $f$'s domain. 
+
+**Matrix calculus**
+
+$$
+\mathbb V (AX + b) = A\mathbb V X A'
+$$
+
+$$
+\frac{\partial}{\partial x} x'A = A
+$$
+
+$$
+\frac{\partial}{\partial x} x'Ax = 2Ax
 $$
