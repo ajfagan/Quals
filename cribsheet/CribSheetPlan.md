@@ -1,5 +1,76 @@
 # A sketch of things I plan to include in my crib sheet:
 
+- [ ] Change of Variables
+- [ ] Characterizing functions by moments
+- [ ] Discrete Distributions
+- [ ] Continuous Distributions
+- [ ] Convergence
+  - [ ] In Distribution
+  - [ ] In Probability
+  - [ ] Almost Surely
+- [ ] Delta Method
+  - [ ] 1st order
+  - [ ] 2nd order
+  - [ ] multivariate
+- [ ] Showing sufficiency
+  - [ ] By definition
+  - [ ] Factorization Thm
+  - [ ] Exponential families
+- [ ] Showing completeness
+  - [ ] By definition
+  - [ ] Exponential families
+- [ ] Showing minimal sufficiency
+  - [ ] By definition
+  - [ ] In Exponential families
+- [ ] Information
+  - [ ] Definition
+  - [ ] In exponential families
+- [ ] Cramer-Rao Inequality
+- [ ] Neyman-Pearson lemma
+  - [ ] With sufficient statistics (follows by factorization thm)
+- [ ] Monotone Likelihood Ratio (MLR)
+- [ ] Karlin-Rubin
+- [ ] Tests
+  - [ ] Score test
+  - [ ] Wald test
+- [ ] Gauss-Markov
+- [ ] Estimable functions
+- [ ] Important fact of normals
+- [ ] Distribution Thm
+- [ ] Cochran's Theorem
+- [ ] Outlier Detection
+  - [ ] Leverage
+    - [ ] Definition
+    - [ ] Guideline
+  - [ ] Studentized Residuals
+    - [ ] Definition
+    - [ ] Guideline
+  - [ ] DFFITS
+    - [ ] Definition
+    - [ ] Guideline
+  - [ ] Cooks
+    - [ ] Definition
+    - [ ] Guideline
+  - [ ] VIF
+    - [ ] Definition
+    - [ ] Guideline
+- [ ] Weighed least squares
+  - [ ] Normal equations
+  - [ ] Fit
+- [ ] Box-Cox
+- [ ] Pairwise Comparison
+  - [ ] Bonferonni
+  - [ ] Tukey HSD
+  - [ ] Scheffe
+- [ ] Model Selection
+  - [ ] Mallow's $C_p$
+  - [ ] AIC
+  - [ ] BIC
+- [ ] Penalized Regression
+  - [ ] Lasso
+  - [ ] Ridge
+- [ ] Matrix calculus
+
 **Theorem 2.15 (Change of Variables):**
 
 Let $X$ have pdf $f_X(x)$ and let $Y = g(X)$, where $g$ is <i>monotone</i>. Let $\mathcal{X}$ and $\mathcal{Y}$ be defined by
@@ -48,7 +119,7 @@ Let $F_X(x)$ and $F_Y(y)$ be two cdf's all of whose moments exists.
 - Hypergeometric distribution: Probability of $k$ successes in $n$ draws from a population of size $N$ containing $K$ successes
     - parameters: $k, n, N, K$
     - Mass functions
-        - pmf: $`\frac{\begin{pmatrix}K-k\end{pmatrix}\begin{pmatrix}N-n \\ n-k\end{pmatrix}}{\begin{pmatrix}N\\ n\end{pmatrix}}`$
+        - pmf: $`\frac{\begin{pmatrix}K\\ k\end{pmatrix}\begin{pmatrix}N-n \\ n-k\end{pmatrix}}{\begin{pmatrix}N\\ n\end{pmatrix}}`$
     - Moments:
         - Mean = $n\frac{K}{N}$
         - Variance = $n\frac{K}{N}\frac{N-K}{N}\frac{N-n}{N-1}$
