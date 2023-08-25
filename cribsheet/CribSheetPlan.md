@@ -70,14 +70,25 @@
   - [ ] Lasso
   - [ ] Ridge
 - [ ] Matrix calculus
+- [ ] Constructing CI from pivot
 - [ ] Shortest length CI using pivots
 - [ ] Projection matrices (Paulynomial)
-- [ ] Trace (Paulynomial)
+- [ ] Trace (PManage accessaulynomial)
 - [ ] Inequalities
 - [ ] Derivative/variance from exponential family form (Alex)
 - [ ] Order statistic pdf
 - [ ] $R^2 \to F$ statistic in one-way Anova (Ryan)
 - [ ] GLM's
+- [ ] Satterthwaite's
+- [ ] Slutsky
+- [ ] Experimental design's
+- [ ] SLR best fits
+- [ ] Inverse of $2\times2$ matrix
+- [ ] Leibniz's rule
+- [ ] Convergence of transformations
+- [ ] Statistical Inference on $\rho$ (Notes 7, Slide 11 in 850 notes)
+- [ ] Random effects
+
 
 
 **Theorem 2.15 (Change of Variables):**
@@ -523,3 +534,7 @@ Let $f(x)$ be a unimodal pdf. If the interval satisfies
 3. The interval $[a,b]$ contains the mode
 <!-----break----->
 Then $[a,b]$ is the shortest among all $1 - \alpha$ CI's.
+
+**Convergence of transformations**
+
+If $h(x)$ is continuous, and $X_i\to X$, then $h(X_i)\to_p h(X)$.
