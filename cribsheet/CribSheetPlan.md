@@ -70,6 +70,15 @@
   - [ ] Lasso
   - [ ] Ridge
 - [ ] Matrix calculus
+- [ ] Shortest length CI using pivots
+- [ ] Projection matrices (Paulynomial)
+- [ ] Trace (Paulynomial)
+- [ ] Inequalities
+- [ ] Derivative/variance from exponential family form (Alex)
+- [ ] Order statistic pdf
+- [ ] $R^2 \to F$ statistic in one-way Anova (Ryan)
+- [ ] GLM's
+
 
 **Theorem 2.15 (Change of Variables):**
 
@@ -501,3 +510,16 @@ $$
 $$
 \frac{\partial}{\partial x} x'Ax = 2Ax
 $$
+
+Matrix Cookbook Chpt 6
+
+
+
+**Minimal size CI**
+
+Let $f(x)$ be a unimodal pdf. If the interval satisfies
+1. $\int_a^bf(x)dx = 1 - \alpha$
+2. $f(a) = f(b) > 0$
+3. The interval $[a,b]$ contains the mode
+<!-----break----->
+Then $[a,b]$ is the shortest among all $1 - \alpha$ CI's.
