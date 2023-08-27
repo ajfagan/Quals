@@ -1,33 +1,33 @@
 # A sketch of things I plan to include in my crib sheet:
 
 - [ ] Change of Variables
-- [ ] Characterizing functions by moments
-- [ ] Discrete Distributions
-- [ ] Continuous Distributions
-- [ ] Convergence
-  - [ ] In Distribution
-  - [ ] In Probability
-  - [ ] Almost Surely
+- [X] Characterizing functions by moments
+- [X] Discrete Distributions
+- [X] Continuous Distributions
+- [X] Convergence
+  - [X] In Distribution
+  - [X] In Probability
+  - [X] Almost Surely
 - [ ] Delta Method
-  - [ ] 1st order
-  - [ ] 2nd order
+  - [X] 1st order
+  - [X] 2nd order
   - [ ] multivariate
 - [ ] Showing sufficiency
   - [ ] By definition
-  - [ ] Factorization Thm
-  - [ ] Exponential families
-- [ ] Showing completeness
-  - [ ] By definition
-  - [ ] Exponential families
-- [ ] Showing minimal sufficiency
-  - [ ] By definition
-  - [ ] In Exponential families
-- [ ] Information
-  - [ ] Definition
-  - [ ] In exponential families
-- [ ] Cramer-Rao Inequality
-- [ ] Neyman-Pearson lemma
-  - [ ] With sufficient statistics (follows by factorization thm)
+  - [X] Factorization Thm
+  - [X] Exponential families
+- [X] Showing completeness
+  - [X] By definition
+  - [X] Exponential families
+- [X] Showing minimal sufficiency
+  - [X] By definition
+  - [X] In Exponential families
+- [X] Information
+  - [X] Definition
+  - [X] In exponential families
+- [X] Cramer-Rao Inequality
+- [X] Neyman-Pearson lemma
+  - [X] With sufficient statistics (follows by factorization thm)
 - [ ] Monotone Likelihood Ratio (MLR)
 - [ ] Karlin-Rubin
 - [ ] Tests
@@ -109,8 +109,8 @@ $$
 **Characterizing function by moments (Thm 2.3.11)**
 
 Let $F_X(x)$ and $F_Y(y)$ be two cdf's all of whose moments exists.
-    1. If $X$ and $Y$ have bounded support, then $F_X(u) = F_Y(u)$ for all $u$ $\iff$ $\mathbb EX^r  =\mathbb EY^r$ for all integers $r = 0, 1, \ldots$
-    2. If the moment generating functions exist and $M_X(t) = M_Y(t)$ for all $t$ in some neighborhood of 0, then $F_X(u) = F_Y(u)$ for all $u$.
+  1. If $X$ and $Y$ have bounded support, then $F_X(u) = F_Y(u)$ for all $u$ $\iff$ $\mathbb EX^r  =\mathbb EY^r$ for all integers $r = 0, 1, \ldots$
+  2. If the moment generating functions exist and $M_X(t) = M_Y(t)$ for all $t$ in some neighborhood of 0, then $F_X(u) = F_Y(u)$ for all $u$.
 
 ### Discrete distributions (3.2)
 - Bernoulli: The 0/1 distribution with $p$ being the probability of $1$ 
@@ -322,6 +322,7 @@ A _Wald test_ is a test based on a statistic of the form
 $$
 Z_n = \frac{W_n - \theta_0}{S_n}
 $$
+
 where $\theta_0$ is the hypothesized null, $W_n$ is an estimator of $\theta$, and $S_n$ is a standard error for $W_n$. If $W_n$ is the MLE of $\theta$, then $S_n = 1 / \sqrt{I_v(W_n)}$ is a reasonable error. 
 
 **Score Test (10.3.2)**
