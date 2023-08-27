@@ -28,56 +28,56 @@
 - [X] Cramer-Rao Inequality
 - [X] Neyman-Pearson lemma
   - [X] With sufficient statistics (follows by factorization thm)
-- [ ] Monotone Likelihood Ratio (MLR)
-- [ ] Karlin-Rubin
-- [ ] Tests
-  - [ ] Score test
-  - [ ] Wald test
+- [X] Monotone Likelihood Ratio (MLR)
+- [X] Karlin-Rubin
+- [X] Tests
+  - [X] Score test
+  - [X] Wald test
 - [ ] Gauss-Markov
-- [ ] Estimable functions
-- [ ] Important fact of normals
-- [ ] Distribution Thm
-- [ ] Cochran's Theorem
-- [ ] Outlier Detection
-  - [ ] Leverage
-    - [ ] Definition
-    - [ ] Guideline
-  - [ ] Studentized Residuals
-    - [ ] Definition
-    - [ ] Guideline
-  - [ ] DFFITS
-    - [ ] Definition
-    - [ ] Guideline
-  - [ ] Cooks
-    - [ ] Definition
-    - [ ] Guideline
-  - [ ] VIF
-    - [ ] Definition
-    - [ ] Guideline
-- [ ] Weighed least squares
-  - [ ] Normal equations
-  - [ ] Fit
+- [X] Estimable functions
+- [X] Important fact of normals
+- [X] Distribution Thm
+- [X] Cochran's Theorem
+- [X] Outlier Detection
+  - [X] Leverage
+    - [X] Definition
+    - [X] Guideline
+  - [X] Studentized Residuals
+    - [X] Definition
+    - [X] Guideline
+  - [X] DFFITS
+    - [X] Definition
+    - [X] Guideline
+  - [X] Cooks
+    - [X] Definition
+    - [X] Guideline
+  - [X] VIF
+    - [X] Definition
+    - [X] Guideline
+- [X] Weighed least squares
+  - [X] Normal equations
+  - [X] Fit
 - [ ] Box-Cox
-- [ ] Pairwise Comparison
-  - [ ] Bonferonni
-  - [ ] Tukey HSD
-  - [ ] Scheffe
-- [ ] Model Selection
-  - [ ] Mallow's $C_p$
-  - [ ] AIC
-  - [ ] BIC
-- [ ] Penalized Regression
-  - [ ] Lasso
-  - [ ] Ridge
-- [ ] Matrix calculus
+- [X] Pairwise Comparison
+  - [X] Bonferonni
+  - [X] Tukey HSD
+  - [X] Scheffe
+- [X] Model Selection
+  - [X] Mallow's $C_p$
+  - [X] AIC
+  - [X] BIC
+- [X] Penalized Regression
+  - [X] Lasso
+  - [X] Ridge
+- [X] Matrix calculus
 - [ ] Constructing CI from pivot
-- [ ] Shortest length CI using pivots
-- [ ] Projection matrices (Paulynomial)
-- [ ] Trace (PManage accessaulynomial)
+- [X] Shortest length CI using pivots
+- [X] Projection matrices
+- [ ] Trace
 - [ ] Inequalities
-- [ ] Derivative/variance from exponential family form (Alex)
+- [ ] Derivative/variance from exponential family form
 - [ ] Order statistic pdf
-- [ ] $R^2 \to F$ statistic in one-way Anova (Ryan)
+- [ ] $R^2 \to F$ statistic in one-way Anova
 - [ ] GLM's
 - [ ] Satterthwaite's
 - [ ] Slutsky
